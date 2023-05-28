@@ -1,0 +1,33 @@
+.contact__column__telephone {
+    font-size: 2.18rem;
+    color: #053E8B;
+    text-decoration: none;
+}
+.contact__column__links {
+    list-style: none;
+    display: flex;
+    column-gap: 40px;
+    justify-content: center;
+    padding: 0;
+}
+.contact__column__links__link {
+    text-decoration: none;
+    color: #6E6969;
+}
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.g-1 {
+    flex-grow: 1;
+}
+.g-3 {
+    flex-grow:3;
+}
+@media (max-width: $breakpoint-md){
+    .contact__column {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+textarea:focus,
+input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+body {
+    font-family: 'Work Sans';
+    color: $textColor;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+li,
+a {
+    text-decoration: none;
+}
+
+main {
+    margin-top: 50px;
+}
+
+figure {
+    margin: 0;
+    position: relative;
+    /* Define a posição relativa para que o figcaption possa ser centralizado */
+}
+
+figcaption {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}

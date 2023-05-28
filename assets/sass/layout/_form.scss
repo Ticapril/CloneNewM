@@ -1,0 +1,41 @@
+.contact__column__form {
+    background-color: $whiteColor;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    //input
+    &__group__field {
+        width: 100%;
+        padding: 10px 5px; //transformar para medida relativa
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        border-color: $secondaryColor;
+    }
+
+    //button
+    &__btn {
+        padding: 15px 30px 15px 30px; //transformar para medida relativa
+        background-color: $secondaryColor;
+        color: $whiteColor;
+        border: none;
+        cursor: pointer;
+    }
+
+    &__btn:hover {
+        background-color: $buttonHover;
+        transition: background-color 200ms ease-in;
+    }
+}
+
+@media(max-width: $breakpoint-md) {
+    .contact__column__form__btn {
+        width: 100%;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+}

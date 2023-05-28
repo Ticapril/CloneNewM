@@ -1,0 +1,41 @@
+.header {
+    border-bottom: 1px solid $borderColor;
+    z-index: 99999;
+    background-color: $whiteColor;
+    // padding: 1.832%; //transformar para medida relativa 15/818,77
+    // height: 70px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 10px;
+
+    &__logo {
+        width: 195px; //195px transformar em medida relativa
+        height: 64px; //64px transformar em medida relativa
+    }
+
+    @media (max-width: $breakpoint-lg) {
+
+        // 700px
+        &__logo {
+            width: 120px; // transformar em medida relativa
+            height: 40px; // transformar em medida relativa
+        }
+    }
+
+    @media(max-width: $breakpoint-md) {
+        .header__nav {
+            display: flex;
+            width: 100%;
+            justify-content: flex-start;
+
+            .header__nav__pages {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__nav {
+        justify-content: center;
+    }
+}

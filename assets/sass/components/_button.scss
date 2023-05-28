@@ -1,0 +1,25 @@
+//botao principal
+.btn {
+    padding: 15px; //transformar para medida relativa 15px/818.77px
+    background-color: #3263F8;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: $buttonHover;
+    transition: background-color 200ms ease-in;
+}
+
+//botao personalizado
+.btn--person {
+    padding: 15px; // 15px 70px 15px 70px
+}
+
+@media (max-width: $breakpoint-sml) {
+    .btn {
+        font-size: 0.8rem;
+        width: 100%;
+    }
+}

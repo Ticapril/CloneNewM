@@ -1,0 +1,69 @@
+.box {
+    padding: 15px;
+    line-height: 27px;
+
+    .box__title {
+        // margin-top: 100px; // refatorar
+        color: $mainColor;
+        font-size: 2.25em; // 36/16
+        line-height: 1.22em; //44.2px/36
+    }
+
+    .box__subtitle {
+        font-size: 1.18em; // 19/16
+        line-height: 2em; //32/16
+        text-transform: uppercase;
+        color: $mainColor;
+    }
+
+    .box__text {
+        font-size: 1em; //16/16
+        line-height: 1.5em; //24/16
+    }
+
+    .box__link {
+        // text-decoration: none;
+        color: $textColor;
+        text-transform: uppercase;
+        font-weight: bold;
+        position: relative;
+    }
+
+    .box__link:hover {
+        color: $secondaryColor
+    }
+
+    //refatorar tamanho cards
+    .box__cards {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center;
+
+        .box__cards__card {
+            border-color: transparent $borderColor;
+            border-style: solid;
+            border-width: 2px;
+            margin: 5px;
+            padding: 30px;
+            margin-bottom: 40px;
+            cursor: pointer;
+            flex-basis: 320px;
+        }
+
+        .box__cards__card:hover {
+            background-color: $boxColor;
+            transition: .4s background-color;
+            border-color: $borderColor;
+            box-shadow: 4px 4px 10px 0px $borderColor;
+            transition: .6s border-color;
+            transition: .3s box-shadow;
+
+            .box__link {
+                color: $secondaryColor;
+                transition: .4s color;
+            }
+        }
+
+    }
+}

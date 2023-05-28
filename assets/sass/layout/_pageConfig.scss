@@ -1,0 +1,54 @@
+.title {
+    // margin-top: 100px; // refatorar
+    color: $mainColor;
+    font-size: 3em; // 36/16
+    line-height: 1.22em; //44.2px/36
+}
+
+.title--animated {
+    color: $mainColor;
+    font-size: 3em; // 48/16
+    line-height: 1.22em; //44.2px/36
+}
+
+.title--animated::after {
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: blink .7s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.subtitle {
+    font-size: 1.18em; // 19/16
+    line-height: 2em; //32/16
+    text-transform: uppercase;
+    color: $mainColor;
+}
+
+.text {
+    font-size: 1em; //16/16
+    line-height: 1.5em; //24/16
+}
+
+.link {
+    color: $textColor;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+
+    &:hover {
+        color: $secondaryColor
+    }
+}
