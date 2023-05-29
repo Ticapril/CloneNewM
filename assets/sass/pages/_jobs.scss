@@ -1,14 +1,13 @@
 .vagas {
     display: flex;
-    flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .vagas__vaga {
-    margin: 15px;
-    flex-basis: 40%;
+    flex: 1 1 300px;
     padding: 15px;
-    flex-grow: 1;
     background-color: $boxColor;
     border: $borderLight;
 }
@@ -22,6 +21,28 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+
+.vagas__image {
+    background-image: url('../../assets/imgs/img-about-us-cases-md.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.vagas__image__title {
+    text-transform: uppercase;
+    color: #fff;
+    margin: 160px 0 0 100px; // transformar em medida relativa
+}
+
+// .vagas__column_title {
+//     color: $mainColor;
+//     font-size: 1.18%; //19/16
+//     line-height: 23px; // não sei como trabalhar com medida relativa para line-height
+//     text-transform: uppercase;
+// }
 
 .accordion {
     width: 450px;

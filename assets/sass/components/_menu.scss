@@ -42,7 +42,7 @@
     background-color: #fff;
     background-image: url('../imgs/img/menuprincipal-btn-bg.png');
     background-repeat: no-repeat;
-    background-position: -47px 7px;
+    background-position: -47px 7px; //top left
 
     @media(min-width: $breakpoint-lg) {
         display: none;
@@ -56,7 +56,6 @@
 
 //ul
 .header__nav__pages {
-    // margin: 0.610%; //5px/818.77 colocar dentro de um breakpoint
     margin: 0;
     padding: 0;
     transition: margin 200ms ease-out;

@@ -1,40 +1,38 @@
-let textBase = 'Tecnologia e';
-let texts = ['resultados.', 'inovação.', 'pessoas.', 'mobilidade.']
+let texts = ['resultados.', 'inovação.', 'pessoas.', 'mobilidade.']; // textos pré-definidos
+let heading = document.querySelector(".title--animated"); // referencia do elemento
 //sortear um dos textos
-function sortNumber(texts) {
+function sortNumber(texts) { // sorteia um numero qualquer
     numberRand = Math.floor(Math.random() * texts.length);
     return numberRand;
 }
-let heading = document.querySelector(".title--animated");
-function typeWriter(element) {
-    element.innerHTML += ' ' + texts[sortNumber(texts)];
-    const arrayText = element.innerHTML.split('');
-    element.innerHTML = '';
-    let count = 0;
-    arrayText.forEach(letter => {
+function typeWriter(element) { // referencia h1 do html5 
+    let textSort = ' ' + texts[sortNumber(texts)];
+    for (let index = 0; index < textSort.length; index++) {
         setTimeout(() => {
-            element.innerHTML += letter;
-        }, 200 * count);
-        count++;
-    });
-    return element.innerHTML;
+            element.innerHTML += textSort[index];
+        }, 200 * index);
+    }
+    retypeWriter(element)
 }
+//executo a função trocando o texto a cada 10s 
+setInterval(() => {
+    typeWriter(heading);
+}, 10000);
+//primeira execução
+
 typeWriter(heading);
 
 // mais tempo para resolver isso
-// function retypeWriter() {
-//   const timeout = setTimeout(function () {
-//     let count = 0;
-//     let texto = document.querySelector('.title--animated');
-//     const arrayTexts = texto.innerHTML.split('');
-//     console.log(arrayTexts);
-//     console.log(arrayTexts.length > 11);
-//     while (arrayTexts.length > 12) {
-//       arrayTexts.pop();
-//     }
-//     console.log(arrayTexts);
-//   }, 5000) //Após 3 segundos a função é executada.
-// }
-// retypeWriter()
-// const testando = document.querySelector('.title--animated');
-// console.log(testando.innerHTML);
+function retypeWriter(element) {
+    setTimeout(() => {
+        const words = element.innerHTML.split(' '); // separo o elemento e um array de palavras
+        const ultimaPalavra = words[2] + ' '; // coloco um espaço no final da ultima palavra
+        const arrayUltimaPalavra = ultimaPalavra.split(''); // transformo a palavra em um array de letras
+        for (let index = 0; index < arrayUltimaPalavra.length; index++) {
+            setTimeout(() => {
+                element.innerHTML = element.innerHTML.slice(0, -1);
+            }, 200 * index);
+        }
+    }, 5000) //Após 3 segundos a função é executada.
+
+}

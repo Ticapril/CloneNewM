@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/icons/css/all.min.css">
+    <link rel="shortcut icon" href="assets/imgs/favicon.png" type="image/x-icon">
 </head>
 
 <body>
@@ -97,8 +98,8 @@
             </div>
         </section>
         <!-- secaoo sobre  -->
-        <section class="about">
-            <div class="container">
+        <section class="about  container">
+            <div class="stats">
                 <div class="about__column">
                     <h3 class="about__column__title">Quem somos</h3>
                     <span class="about__column__subtitle">+ 400.000</span>
@@ -107,8 +108,15 @@
                     <p class="about__column__description">clientes</p>
                     <button class="about__column__btn">Assista nosso video institucional</button>
                 </div>
-                <div class="about__column text-center">
-                    <!-- <a href="#"><img src="./assets/imgs/play.png" alt=""></a> -->
+                <div id="about__column">
+                    <a href="#" id="link-video"><img class="about__column__image" src="./assets/imgs/play.png"
+                            alt=""></a>
+                    <div id="video-container" style="display: none;">
+                        <iframe width="400" height="200" src="https://www.youtube.com/embed/TCcFQL5sUcI"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </section>
@@ -178,29 +186,25 @@
                 </figcaption>
             </figure>
         </div>
-        <section class="vagas container">
-
-            <div class="vagas__container__column">
-                <div class="vagas__column">
+        <section class="container">
+            <div class="vagas">
+                <div class="vagas__vaga">
                     <h3 class="subtitle">Analista de Sistemas</h3><button class="btn btn--person">Saiba
                         Mais</button>
                 </div>
-                <div class="vagas__column">
+                <div class="vagas__vaga">
                     <h3 class="subtitle">Coordenador de Projetos</h3><button class="btn btn--person">Saiba
                         Mais</button>
                 </div>
-            </div>
 
-            <div class="vagas__container__column">
-                <div class="vagas__column">
+                <div class="vagas__vaga">
                     <h3 class="subtitle">Desenvolvedor IOS</h3><button class="btn btn--person">Saiba Mais</button>
                 </div>
-                <div class="vagas__column">
+                <div class="vagas__vaga">
                     <h3 class="subtitle">Desenvolvedor React Native/PHP</h3><button class="btn btn--person">Saiba
                         Mais</button>
                 </div>
             </div>
-
         </section>
     </main>
     <footer class="footer mt-2">
@@ -274,6 +278,16 @@
     <script src="assets/js/funcTypeWriter.js"></script>
     <script src="assets/js/app.js"></script>
     <script src="assets/js/slick.min.js"></script>
+    <script>
+        document.getElementById("link-video").addEventListener("click", function (event) {
+            event.preventDefault(); // Impede o comportamento padrão do link
+
+            var videoContainer = document.getElementById("video-container");
+            let imageVideo = document.querySelector(".about__column__image");
+            imageVideo.style.display = "none";
+            videoContainer.style.display = "block";
+        });
+    </script>
 </body>
 
 </html>

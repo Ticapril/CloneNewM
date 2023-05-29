@@ -519,7 +519,7 @@ figcaption {
 
 .btn {
   padding: 15px;
-  background-color: #3263F8;
+  background-color: #577ff9;
   color: #fff;
   text-transform: uppercase;
   cursor: pointer; }
@@ -724,6 +724,19 @@ figcaption {
     color: #fff;
     text-transform: uppercase; }
 
+.stats {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; }
+
+@media (max-width: 768px) {
+  .stats {
+    flex-direction: column; } }
+
+.about__column__image {
+  width: 256px; }
+
 .feedback {
   display: flex;
   flex-wrap: wrap;
@@ -808,10 +821,25 @@ figcaption {
   color: #000;
   transition: .3s all; }
 
-.vagas__column {
+.vagas {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.vagas__vaga {
+  flex: 1 1 300px;
+  padding: 15px;
   background-color: #FAFAFA;
-  padding: 4.16%;
-  margin: 2.08%; }
+  border: 1px solid #dee2e6; }
+
+.vagas__vaga__lista {
+  list-style: disc; }
+
+.vagas__estagio,
+.vagas__clt {
+  display: flex;
+  flex-wrap: wrap; }
 
 .vagas__image {
   background-image: url("../../assets/imgs/img-about-us-cases-md.jpg");
@@ -824,41 +852,6 @@ figcaption {
   text-transform: uppercase;
   color: #fff;
   margin: 160px 0 0 100px; }
-
-.vagas__column_title {
-  color: #053E8B;
-  font-size: 1.18%;
-  line-height: 23px;
-  text-transform: uppercase; }
-
-.vagas__container__column {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap; }
-
-.vagas__column {
-  flex-basis: 41.6%; }
-
-.vagas {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
-
-.vagas__vaga {
-  margin: 15px;
-  flex-basis: 40%;
-  padding: 15px;
-  flex-grow: 1;
-  background-color: #FAFAFA;
-  border: 1px solid #dee2e6; }
-
-.vagas__vaga__lista {
-  list-style: disc; }
-
-.vagas__estagio,
-.vagas__clt {
-  display: flex;
-  flex-wrap: wrap; }
 
 .accordion {
   width: 450px;
