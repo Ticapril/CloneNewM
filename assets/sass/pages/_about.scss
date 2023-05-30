@@ -39,6 +39,12 @@
 
 .about__column__image {
     width: 256px;
+    transition: all 200ms ease-in;
+}
+
+//video Container Home page
+#video-container {
+    transition: all 200ms ease-in;
 }
 
 .feedback {

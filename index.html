@@ -94,7 +94,8 @@
                     </div>
                 </div>
                 <!-- botão -->
-                <div class="text-center mb-2"><button class="btn">Baixe nossa apresentação institucional</button></div>
+                <div class="text-center mb-2 mt-2"><button class="btn">Baixe nossa apresentação institucional</button>
+                </div>
             </div>
         </section>
         <!-- secaoo sobre  -->
@@ -186,7 +187,7 @@
                 </figcaption>
             </figure>
         </div>
-        <section class="container">
+        <section class="container mt-2">
             <div class="vagas">
                 <div class="vagas__vaga">
                     <h3 class="subtitle">Analista de Sistemas</h3><button class="btn btn--person">Saiba
@@ -275,14 +276,14 @@
         </div>
     </footer>
     <script src="assets/js/jquery-3.7.0.min.js"></script>
-    <script src="assets/js/funcTypeWriter.js"></script>
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/main.js"></script>
     <script src="assets/js/slick.min.js"></script>
     <script>
         document.getElementById("link-video").addEventListener("click", function (event) {
             event.preventDefault(); // Impede o comportamento padrão do link
 
-            var videoContainer = document.getElementById("video-container");
+            let videoContainer = document.getElementById("video-container");
             let imageVideo = document.querySelector(".about__column__image");
             imageVideo.style.display = "none";
             videoContainer.style.display = "block";

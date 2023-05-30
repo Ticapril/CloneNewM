@@ -36,19 +36,17 @@
     //refatorar tamanho cards
     .box__cards {
         display: flex;
-        flex-wrap: wrap;
         align-items: flex-start;
         justify-content: center;
+        gap: 10px;
 
         .box__cards__card {
             border-color: transparent $borderColor;
             border-style: solid;
             border-width: 2px;
-            margin: 5px;
             padding: 30px;
-            margin-bottom: 40px;
             cursor: pointer;
-            flex-basis: 320px;
+            flex-grow: 1;
         }
 
         .box__cards__card:hover {
@@ -63,6 +61,13 @@
                 color: $secondaryColor;
                 transition: .4s color;
             }
+        }
+
+    }
+
+    @media (max-width: $breakpoint-lg) {
+        .box__cards {
+            flex-direction: column;
         }
 
     }

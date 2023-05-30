@@ -560,18 +560,16 @@ figcaption {
     color: #577ff9; }
   .box .box__cards {
     display: flex;
-    flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: center; }
+    justify-content: center;
+    gap: 10px; }
     .box .box__cards .box__cards__card {
       border-color: transparent #dee2e6;
       border-style: solid;
       border-width: 2px;
-      margin: 5px;
       padding: 30px;
-      margin-bottom: 40px;
       cursor: pointer;
-      flex-basis: 320px; }
+      flex-grow: 1; }
     .box .box__cards .box__cards__card:hover {
       background-color: #FAFAFA;
       transition: .4s background-color;
@@ -582,6 +580,9 @@ figcaption {
       .box .box__cards .box__cards__card:hover .box__link {
         color: #577ff9;
         transition: .4s color; }
+  @media (max-width: 992px) {
+    .box .box__cards {
+      flex-direction: column; } }
 
 .header {
   display: flex;
@@ -735,7 +736,11 @@ figcaption {
     flex-direction: column; } }
 
 .about__column__image {
-  width: 256px; }
+  width: 256px;
+  transition: all 200ms ease-in; }
+
+#video-container {
+  transition: all 200ms ease-in; }
 
 .feedback {
   display: flex;
