@@ -1,11 +1,11 @@
 let texts = ['resultados.', 'inovação.', 'pessoas.', 'mobilidade.']; // textos pré-definidos
 let heading = document.querySelector(".title--animated"); // referencia do elemento
 //sortear um dos textos
-function sortNumber(texts) { // sorteia um numero qualquer
+const sortNumber = (texts) => { // sorteia um numero qualquer
     numberRand = Math.floor(Math.random() * texts.length);
     return numberRand;
 }
-function typeWriter(element) { // referencia h1 do html5 
+const typeWriter = (element) => { // referencia h1 do html5 
     let textSort = ' ' + texts[sortNumber(texts)];
     for (let index = 0; index < textSort.length; index++) {
         setTimeout(() => {
@@ -14,12 +14,13 @@ function typeWriter(element) { // referencia h1 do html5
     }
     retypeWriter(element)
 }
+//primeira execução
+typeWriter(heading);
 //executo a função trocando o texto a cada 10s 
 setInterval(() => {
     typeWriter(heading);
 }, 10000);
-//primeira execução
-typeWriter(heading);
+
 
 function retypeWriter(element) {
     setTimeout(() => {
