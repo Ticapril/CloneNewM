@@ -5,18 +5,20 @@
     color: #fff;
     text-transform: uppercase;
     cursor: pointer;
+
+    &:hover {
+        background-color: $buttonHover;
+        transition: background-color 200ms ease-in;
+    }
+
+    //botao personalizado
+    &--person {
+        padding: 15px; // 15px 70px 15px 70px
+    }
+
 }
 
-.btn:hover {
-    background-color: $buttonHover;
-    transition: background-color 200ms ease-in;
-}
-
-//botao personalizado
-.btn--person {
-    padding: 15px; // 15px 70px 15px 70px
-}
-
+//botão no mobile
 @media (max-width: $breakpoint-sml) {
     .btn {
         font-size: 0.8rem;

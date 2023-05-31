@@ -1,45 +1,64 @@
-// Sobre Seção
+// Sobre Seção refatorar
 .about {
-    display: inline-block;
-    color: #fff;
-    background-image: url('../../assets/imgs/img-home-about-us-md.jpg');
-    background-repeat: no-repeat;
+    color: $whiteColor;
+    background: url('../../assets/imgs/img-home-about-us-md.jpg') no-repeat;
     background-size: cover;
     width: 100%;
     height: 100%;
+
+    &__column {
+        padding: 20px;
+    }
+
+    &__column__title {
+        font-size: 1.18em;
+        line-height: 23px;
+        text-transform: uppercase;
+    }
+
+    &__column__subtitle {
+        font-size: 3.625em;
+    }
+
+    &__column__description {
+        font-size: 1.25em;
+        line-height: 30px;
+    }
+
+    // Posicionamento
+    // Box model
+    // Tipografia
+    // Visual
+    // botão 
+    &__column__btn {
+        text-transform: uppercase;
+        padding: 20px;
+        background-color: transparent;
+        border: $borderWhite;
+        color: $whiteColor;
+
+        cursor: pointer;
+    }
+
+    &__column__btn:hover {
+        background-color: #fff;
+        color: #000;
+        transition: .3s all;
+    }
 }
 
-.about__column {
-    padding: 2.08%; //20/960
+
+/// seção vagas home
+.vagas__image {
+    background-image: url('../../assets/imgs/img-about-us-cases-md.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
 }
 
-.about__column__title {
-    font-size: 1.18%; //19/16
-    line-height: 23px;
+.vagas__image__title {
     text-transform: uppercase;
-}
-
-.about__column__subtitle {
-    font-size: 3.625%; // 58/16
-}
-
-.about__column__description {
-    font-size: 1.25%; // 20/16
-    line-height: 30px;
-}
-
-// botão 
-.about__column__btn {
-    padding: 2.08%; //20/960
-    background-color: transparent;
-    border: 2px solid #fff;
     color: #fff;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-
-.about__column__btn:hover {
-    background-color: #fff;
-    color: #000;
-    transition: .3s all;
+    margin: 160px 0 0 100px; // transformar em medida relativa
 }

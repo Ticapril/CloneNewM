@@ -1,28 +1,63 @@
+//header comportamento padrão Desktop e telas grandes
 .header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    //transformação do menu principal
+    &__nav {
+        height: 73px;
+
+        //ul
+        &__pages {
+            height: 100%;
+            display: flex;
+            column-gap: 15px;
+            margin: 0;
+            padding: 0;
+            transition: margin 200ms ease-out;
+
+            &__page {
+                // li
+                display: flex;
+                height: 100%;
+                align-items: center;
+
+                // a
+                &__link {
+                    display: block;
+                    text-decoration: none;
+                    font-weight: bold;
+                    font-size: 1.125em; // medida relativa! 18/16
+                    color: $textColor;
+                    transition: all 200ms ease-out;
+                    position: relative;
+
+                    // Efeito Css3 nos links 
+                    &::after {
+                        content: ' ';
+                        width: 0%;
+                        height: 3px;
+                        background-color: $mainColor;
+                        position: absolute;
+                        bottom: -37px;
+                        left: 0;
+                    }
+
+                    &:hover {
+                        &::after {
+                            width: 100%;
+                            transition: all 200ms ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
-//transformação do menu principal
-.header__nav {
-    height: 73px;
-}
-
-.header__nav__pages {
-    height: 100%;
-    display: flex;
-    column-gap: 15px;
-}
-
-.header__nav__pages__page {
-    display: flex;
-    height: 100%;
-    align-items: center;
-}
-
-// fim transformação
-@media(max-width: 768px) {
+// header comportamento mobile e tablets
+@media(max-width: $breakpoint-md) {
     .header {
         justify-content: center;
         align-items: stretch;
@@ -34,106 +69,57 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
 
-.header__elements__btn {
-    width: 50px; // como converter
-    height: 50px; // não entendi
-    background-color: #fff;
-    background-image: url('../imgs/img/menuprincipal-btn-bg.png');
-    background-repeat: no-repeat;
-    background-position: -47px 7px; //top left
+    &__btn {
+        width: 50px; // como converter
+        height: 50px; // não entendi
+        background-color: #fff;
+        background-image: url('../imgs/img/menuprincipal-btn-bg.png');
+        background-repeat: no-repeat;
+        background-position: -47px 7px; //top left
 
-    @media(min-width: $breakpoint-lg) {
-        display: none;
-    }
-}
+        @media(min-width: $breakpoint-lg) {
+            display: none;
+        }
 
-//estado botão fechado
-.header__elements__btn--closed {
-    background-position: 5px 5px;
-}
+        //estado botão fechado
+        &--closed {
+            background-position: 5px 5px;
+        }
 
-//ul
-.header__nav__pages {
-    margin: 0;
-    padding: 0;
-    transition: margin 200ms ease-out;
-}
-
-//ul li a
-.header__nav__pages__page__link {
-    display: block;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.125em; // medida relativa! 18/16
-    color: $textColor;
-    transition: all 200ms ease-out;
-    position: relative;
-}
-
-// Efeito Css3 nos links 
-.header__nav__pages__page__link::after {
-    content: ' ';
-    width: 0%;
-    height: 3px;
-    background-color: $mainColor;
-    position: absolute;
-    bottom: -37px;
-    left: 0;
-}
-
-.header__nav__pages__page__link:hover {
-    &::after {
-        width: 100%;
-        transition: all 200ms ease-in-out;
     }
 }
 
 // Esconder o menu
 @media(max-width: ($breakpoint-lg - 1)) {
     .header {
+        // tag header
         flex-direction: column;
         align-items: stretch;
-    }
 
-    .header__nav__pages__page__link::after {
-        bottom: -7px;
-    }
+        &__nav {
+            // tag nav
+            height: 240px;
+            margin-left: 5px;
 
-    .header__nav {
-        height: 240px;
-        margin-left: 5px;
-    }
+            &--closed {
+                display: none !important;
+            }
 
-    .header__elements {
-        margin: 5px 5px 5px 5px;
-    }
+            &__pages {
+                // tag ul
+                row-gap: 5px;
+                flex-direction: column;
 
-    .header__nav__pages {
-        row-gap: 5px;
-        flex-direction: column;
-    }
+                &__page__link::after {
+                    bottom: -7px;
+                }
+            }
+        }
 
-    .header__nav--closed {
-        // Olha que loucura!
-        // .header__nav__btn  {
-        //     background-position: -47px 7px;
-        // }
-        // .header__nav__pages{
-        //     margin: 0;
-        // }
-        // .header__nav__pages__page {
-        //     margin-bottom: 0;
-        // }
-        // .header__nav__pages__page__link{
-        //     margin: 0;
-        //     height: 0;
-        //     overflow: hidden;
-        // }
-        // .header__nav__pages__page__link--current {
-        //     border: none;
-        // }
-        display: none !important;
+        &__elements {
+            margin: 5px 5px 5px 5px;
+        }
+
     }
 }

@@ -2,8 +2,6 @@
     border-bottom: 1px solid $borderColor;
     z-index: 99999;
     background-color: $whiteColor;
-    // padding: 1.832%; //transformar para medida relativa 15/818,77
-    // height: 70px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -24,18 +22,14 @@
     }
 
     @media(max-width: $breakpoint-md) {
-        .header__nav {
+        &__nav {
             display: flex;
             width: 100%;
             justify-content: flex-start;
 
-            .header__nav__pages {
+            &__pages {
                 margin-bottom: 0;
             }
         }
-    }
-
-    &__nav {
-        justify-content: center;
     }
 }

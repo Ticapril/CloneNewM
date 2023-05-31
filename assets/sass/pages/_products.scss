@@ -1,16 +1,19 @@
-.product:nth-child(2n) {
-    background-color: #FAFAFA;
-    flex-flow: row-reverse wrap;
-}
-.product__image {
-    padding: 20px;
-}
 .product {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-}
-.product__column {
-    flex-basis: 450px;
-    padding: 20px;
+
+    &__column {
+        flex-basis: 450px;
+        padding: 20px;
+    }
+
+    &__image {
+        padding: 20px;
+    }
+
+    &:nth-child(2n) {
+        background-color: $boxColor;
+        flex-flow: row-reverse wrap;
+    }
 }

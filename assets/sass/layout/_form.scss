@@ -31,11 +31,11 @@
 }
 
 @media(max-width: $breakpoint-md) {
-    .contact__column__form__btn {
-        width: 100%;
-    }
-
     .contact {
         flex-direction: column;
+    }
+
+    .contact__column__form__btn {
+        width: 100%;
     }
 }

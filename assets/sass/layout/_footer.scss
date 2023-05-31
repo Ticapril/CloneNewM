@@ -64,14 +64,14 @@
         flex-direction: column;
         text-align: center;
         align-items: center;
+
+        &__column {
+            padding: 0;
+        }
     }
 
     .footer__logo {
         width: 120px; //alterar para medida relativa
         height: 40px; //alterar para medida relativa
-    }
-
-    .footer__main__column {
-        padding: 0;
     }
 }

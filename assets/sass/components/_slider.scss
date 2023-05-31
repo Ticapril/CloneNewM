@@ -3,10 +3,10 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-}
 
-.slider__image {
-    border-left: $borderLight;
-    border-right: $borderLight;
-    padding: 20px;
+    &__client {
+        border-left: $borderLight;
+        border-right: $borderLight;
+        padding: 20px;
+    }
 }
